@@ -2,9 +2,9 @@ require 'formula'
 
 class NginxPushStreamModule < Formula
   homepage 'http://github.com/wandenberg/nginx-push-stream-module'
-  url 'https://github.com/wandenberg/nginx-push-stream-module/tarball/0.3.3'
-  sha1 '5b1f0b53ba062cae3ff48ed47a749020e0406cc5'
-  def initialize; super "nginx-push-stream-module"; end
+  url 'git://github.com/wandenberg/nginx-push-stream-module.git', :using => :git
+  md5 '078dfe495370dcb96a199df82907ea6d'
+  def initialize; super "NginxPushStreamModule"; end
 end
 
 class Nginx < Formula
