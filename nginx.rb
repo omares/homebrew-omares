@@ -27,10 +27,10 @@ class Nginx < Formula
 
   depends_on 'pcre'
 
-  option '--with-passenger', 'Compile with support for Phusion Passenger module'
-  option '--with-webdav', 'Compile with support for WebDAV module'
-  option '--with-push-stream', 'Compile with support for Push Stream module'
-  option '--with-http-auth-request', 'Compile with support for HTTP Auth Request module'
+  option 'with-passenger', 'Compile with support for Phusion Passenger module'
+  option 'with-webdav', 'Compile with support for WebDAV module'
+  option 'with-push-stream', 'Compile with support for Push Stream module'
+  option 'with-http-auth-request', 'Compile with support for HTTP Auth Request module'
 
   skip_clean 'logs'
 
@@ -73,10 +73,10 @@ class Nginx < Formula
             "--pid-path=#{var}/run/nginx.pid",
             "--lock-path=#{var}/nginx/nginx.lock"]
 
-    args << passenger_config_args if build.include? '--with-passenger'
-    args << "--with-http_dav_module" if build.include? '--with-webdav'
-    args << push_stream if ARGV.include? '--with-push-stream'
-    args << http_auth_request if ARGV.include? '--with-http-auth-request'
+    args << passenger_config_args if build.include? 'with-passenger'
+    args << "--with-http_dav_module" if build.include? 'with-webdav'
+    args << push_stream if ARGV.include? 'with-push-stream'
+    args << http_auth_request if ARGV.include? 'with-http-auth-request'
 
     system "./configure", *args
     system "make"
