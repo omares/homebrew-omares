@@ -3,7 +3,6 @@ require 'formula'
 class NginxPushStreamModule < Formula
   homepage 'http://github.com/wandenberg/nginx-push-stream-module'
   url 'git://github.com/wandenberg/nginx-push-stream-module.git', :using => :git
-  md5 '078dfe495370dcb96a199df82907ea6d'
   def initialize; super "NginxPushStreamModule"; end
 end
 
