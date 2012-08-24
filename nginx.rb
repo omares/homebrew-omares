@@ -9,7 +9,7 @@ end
 
 class NginxHttpAuthRequestModule < Formula
   homepage 'http://mdounin.ru/hg/ngx_http_auth_request_module'
-  url 'http://mdounin.ru/hg/ngx_http_auth_request_module/file/', :using => :hg
+  url 'http://mdounin.ru/hg/ngx_http_auth_request_module', :using => :hg
   def initialize; super "NginxHttpAuthRequestModule"; end
 end
 
