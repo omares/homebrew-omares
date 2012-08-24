@@ -4,7 +4,7 @@
 ## Usage  
 Tap into the repository using the tap command:
 
-    brew tap homebrew-omares
+    brew tap omares/homebrew-omares
 
 ## Available Formulae  
 * **nginx**  
