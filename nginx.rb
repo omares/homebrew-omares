@@ -75,8 +75,8 @@ class Nginx < Formula
 
     args << passenger_config_args if build.include? 'with-passenger'
     args << "--with-http_dav_module" if build.include? 'with-webdav'
-    args << push_stream if ARGV.include? 'with-push-stream'
-    args << http_auth_request if ARGV.include? 'with-http-auth-request'
+    args << push_stream if build.include? 'with-push-stream'
+    args << http_auth_request if build.include? 'with-http-auth-request'
 
     system "./configure", *args
     system "make"
